@@ -1,0 +1,24 @@
+{
+    "poets": [
+        {
+            "name": "Рӯдакӣ",
+            "link": "rudaki.html"
+        },
+        {
+            "name": "Фирдавсӣ",
+            "link": "firdausi.html"
+        },
+        {
+            "name": "Ҳофиз",
+            "link": "hofiz.html"
+        },
+        {
+            "name": "Саъдӣ",
+            "link": "saadi.html"
+        },
+        {
+            "name": "Ҷалолиддини Румӣ",
+            "link": "rumi.html"
+        }
+    ]
+}
