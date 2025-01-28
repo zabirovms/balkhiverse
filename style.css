@@ -81,3 +81,51 @@ h1 {
         font-size: 1.5rem;
     }
 }
+/* Poet Page Styles */
+.back-btn {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+}
+
+.poet-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.poet-large-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+.bio {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.works-container h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.poem {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.poem pre {
+    white-space: pre-wrap;
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.6;
+}
