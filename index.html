@@ -1,35 +1,22 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="tg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ганҷинаи Адабиёти Тоҷик</title>
+    <title>Шоирони Тоҷик</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">Асосӣ</a></li>
-            <li><a href="#">Шоирон</a></li>
-            <li><a href="#">Мусиқӣ</a></li>
-            <li><a href="#">Дар бораи мо</a></li>
-            <li><a href="#">Тамос</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1>Ашъори Шоирони Классики Тоҷик</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Ҷустуҷӯ...">
+        </div>
+    </header>
 
-    <main>
-        <h1>Хуш омадед ба Ганҷинаи Адабиёти Тоҷик</h1>
-        <section>
-            <h2>Шоирони Номдор</h2>
-            <ul id="poet-list">
-                <!-- Poets will be loaded here dynamically -->
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Ганҷинаи Адабиёти Тоҷик. Ҳамаи ҳуқуқҳо ҳифз шудаанд.</p>
-    </footer>
+    <div class="poets-grid" id="poetsContainer"></div>
 
     <script src="script.js"></script>
 </body>
