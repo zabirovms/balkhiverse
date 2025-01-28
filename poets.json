@@ -1,24 +1,23 @@
-{
-    "poets": [
-        {
-            "name": "Рӯдакӣ",
-            "link": "rudaki.html"
-        },
-        {
-            "name": "Фирдавсӣ",
-            "link": "firdausi.html"
-        },
-        {
-            "name": "Ҳофиз",
-            "link": "hofiz.html"
-        },
-        {
-            "name": "Саъдӣ",
-            "link": "saadi.html"
-        },
-        {
-            "name": "Ҷалолиддини Румӣ",
-            "link": "rumi.html"
-        }
-    ]
-}
+// poets.json
+[
+    {
+        "id": 1,
+        "name": "Рӯдакӣ",
+        "description": "Абӯабдуллоҳ Рӯдакӣ - асосгузори адабиёти форсу тоҷик.",
+        "image": "images/rudaki.jpg",
+        "works": [
+            {
+                "title": "Ғазалҳо",
+                "text": "Биёед ёрон якчу ёд кунем...\nЧунин ғам махзор ояд, ки хурӯем..."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Фирдавсӣ",
+        "image": "images/ferdowsi.jpg",
+        "description": "Ҳаким Абулқосим Фирдавсӣ - эҷодгари Шоҳнома.",
+        "works": []
+    }
+    // Add other poets similarly
+]
