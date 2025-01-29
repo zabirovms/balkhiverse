@@ -1,52 +1,82 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const poetsContainer = document.getElementById('poetsContainer');
-    const searchInput = document.getElementById('searchInput');
-    
-    // Sample poets data (no images)
-    const poets = [
-        {
-            id: 1,
-            name: "Рӯдакӣ",
-            description: "Абӯабдуллоҳ Рӯдакӣ - асосгузори адабиёти форсу тоҷик.",
-            works: [
-                { title: "Ғазалҳо", text: "Биёед ёрон якчу ёд кунем..." }
-            ]
-        },
-        {
-            id: 2,
-            name: "Фирдавсӣ",
-            description: "Ҳаким Абулқосим Фирдавсӣ - эҷодгари Шоҳнома.",
-            works: [
-                { title: "Шоҳнома", text: "Бином номи китоб Шоҳномаст..." }
-            ]
-        }
-    ];
-
-    // Load poets
-    displayPoets(poets);
-
-    // Search functionality
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        const filteredPoets = poets.filter(poet => 
-            poet.name.toLowerCase().includes(searchTerm)
-        );
-        displayPoets(filteredPoets);
-    });
-
-    function displayPoets(poets) {
-        poetsContainer.innerHTML = '';
-        poets.forEach(poet => {
-            const poetCard = document.createElement('div');
-            poetCard.className = 'poet-card';
-            poetCard.innerHTML = `
-                <div class="poet-name">${poet.name}</div>
-            `;
-            poetCard.addEventListener('click', () => {
-                localStorage.setItem('selectedPoet', JSON.stringify(poet));
-                window.location.href = 'poet.html';
-            });
-            poetsContainer.appendChild(poetCard);
-        });
+const poets = [
+    {
+        id: 1,
+        name: "Рӯдакӣ",
+        description: "Абӯабдуллоҳ Рӯдакӣ - асосгузори адабиёти форсу тоҷик.",
+        works: [
+            { title: "Ғазалҳо", text: "Биёед ёрон якчу ёд кунем..." }
+        ]
+    },
+    {
+        id: 2,
+        name: "Фирдавсӣ",
+        description: "Ҳаким Абулқосим Фирдавсӣ - эҷодгари Шоҳнома.",
+        works: [
+            { title: "Шоҳнома", text: "Бином номи китоб Шоҳномаст..." }
+        ]
+    },
+    {
+        id: 3,
+        name: "Саъдӣ",
+        description: "Мушаррафуддин Саъдӣ - шоири бузурги адабиёти форсу тоҷик.",
+        works: [
+            { title: "Гулистон", text: "Ба номи Худованд биёмурзонанда..." }
+        ]
+    },
+    {
+        id: 4,
+        name: "Ҳофиз",
+        description: "Шамсиддин Муҳаммад Ҳофиз - шоири машҳури ғазалсаро.",
+        works: [
+            { title: "Ғазалҳо", text: "Аз ҷониби ман ҳар ки ҷон аст..." }
+        ]
+    },
+    {
+        id: 5,
+        name: "Умари Хайём",
+        description: "Ҳаким Умари Хайём - шоири бузурги рубоиҳо.",
+        works: [
+            { title: "Рубоиҳо", text: "Биё, ки қадаҳ пур кунам..." }
+        ]
+    },
+    {
+        id: 6,
+        name: "Ҷалолиддини Румӣ",
+        description: "Мавлоно Ҷалолиддини Румӣ - шоири машҳури мавлавӣ.",
+        works: [
+            { title: "Маснавӣ", text: "Бишнав аз най чун ҳикоят мекунад..." }
+        ]
+    },
+    {
+        id: 7,
+        name: "Низомӣ",
+        description: "Низомии Ганҷавӣ - шоири машҳури достонҳо.",
+        works: [
+            { title: "Хамса", text: "Ба номи он ки ҷаҳонро офарид..." }
+        ]
+    },
+    {
+        id: 8,
+        name: "Анварӣ",
+        description: "Абулҳасан Анварӣ - шоири машҳури қасидаҳо.",
+        works: [
+            { title: "Қасидаҳо", text: "Ба номи он ки ҷаҳонро офарид..." }
+        ]
+    },
+    {
+        id: 9,
+        name: "Камол",
+        description: "Камоли Хуҷандӣ - шоири машҳури ғазалҳо.",
+        works: [
+            { title: "Ғазалҳо", text: "Биё, ки қадаҳ пур кунам..." }
+        ]
+    },
+    {
+        id: 10,
+        name: "Айнӣ",
+        description: "Садриддин Айнӣ - нависанда ва шоири тоҷик.",
+        works: [
+            { title: "Ёддоштҳо", text: "Зиндагии ман аз кӯдакӣ..." }
+        ]
     }
-});
+];
