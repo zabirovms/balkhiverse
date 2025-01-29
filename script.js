@@ -1,15 +1,29 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
     const poetsContainer = document.getElementById('poetsContainer');
     const searchInput = document.getElementById('searchInput');
     
-    // Fetch poets data
-    fetch('poets.json')
-        .then(response => response.json())
-        .then(data => {
-            poets = data;
-            displayPoets(poets);
-        });
+    // Sample poets data (no images)
+    const poets = [
+        {
+            id: 1,
+            name: "Рӯдакӣ",
+            description: "Абӯабдуллоҳ Рӯдакӣ - асосгузори адабиёти форсу тоҷик.",
+            works: [
+                { title: "Ғазалҳо", text: "Биёед ёрон якчу ёд кунем..." }
+            ]
+        },
+        {
+            id: 2,
+            name: "Фирдавсӣ",
+            description: "Ҳаким Абулқосим Фирдавсӣ - эҷодгари Шоҳнома.",
+            works: [
+                { title: "Шоҳнома", text: "Бином номи китоб Шоҳномаст..." }
+            ]
+        }
+    ];
+
+    // Load poets
+    displayPoets(poets);
 
     // Search functionality
     searchInput.addEventListener('input', (e) => {
@@ -26,11 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const poetCard = document.createElement('div');
             poetCard.className = 'poet-card';
             poetCard.innerHTML = `
-                <img src="${poet.image}" class="poet-image" alt="${poet.name}">
                 <div class="poet-name">${poet.name}</div>
             `;
             poetCard.addEventListener('click', () => {
-                window.location.href = `poet.html?id=${poet.id}`;
+                localStorage.setItem('selectedPoet', JSON.stringify(poet));
+                window.location.href = 'poet.html';
             });
             poetsContainer.appendChild(poetCard);
         });
